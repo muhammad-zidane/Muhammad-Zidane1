@@ -1,20 +1,15 @@
-.nav-links a {
-  text-decoration: none;
-  color: white;
-  font-weight: 500;
-  padding: 10px 15px;
-}
-
-.nav-links a:hover {
+/* ===== RESET DASAR ===== */
+body {
   background-color: #f8f9fa;
-  border-radius: 5px;
-  transition: all 0.5s ease;
-  color: #0a0a5c;
+  margin: 0;
+  padding: 0;
 }
 
+/* ===== NAVBAR ===== */
 .navbar {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 15px 10px;
   background-color: #001f3f;
 }
@@ -25,41 +20,31 @@
   font-size: 24px;
 }
 
-.background {
-  background-color: #f8f9fa;
+.nav-links {
+  display: flex;
+  gap: 10px;
 }
 
-.footer {
-  text-align: center;
-  padding: 20px;
-  background-color: #001f3f;
-  color: white;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
-}
-
-.email-link {
-  color: #001f3f;
+.nav-links a {
   text-decoration: none;
+  color: white;
   font-weight: 500;
-  padding: 5px 10px;
-  margin: auto;
+  padding: 10px 15px;
+  transition: all 0.5s ease;
 }
 
-.email-link:hover {
-  text-decoration: underline;
+.nav-links a:hover {
+  background-color: #f8f9fa;
+  color: #0a0a5c;
   border-radius: 5px;
-  transition: 0.5s;
-  background-color: #f8f0cc;
 }
 
+/* ===== HERO SECTION ===== */
 .hero {
   display: flex;
   align-items: center;
   gap: 40px;
   min-height: 80vh;
-  margin-left: 10px;
   margin-left: 10px;
 }
 
@@ -68,8 +53,10 @@
 }
 
 .hero p {
+  color: #000;
   font-size: 20px;
   line-height: 1.6;
+  max-width: 500px;
 }
 
 .hero-image {
@@ -77,30 +64,112 @@
 }
 
 .hero-image img {
-  max-width: 100%;
-  border-radius: 10px;
   width: 100%;
   height: auto;
+  border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-.hero p {
-  color: #000000;
-  font-size: 20px;
-  line-height: 1.6;
-  max-width: 500px;
-}
-
+/* ===== BUTTON ===== */
 .btn {
+  display: inline-block;
   padding: 12px 20px;
+  margin-top: 20px;
   background-color: #4e73df;
   color: white;
   border-radius: 6px;
-  transition: all 0.5s ease;
-  margin-top: 20px;
   text-decoration: none;
+  transition: all 0.5s ease;
 }
 
 .btn:hover {
   background-color: #3a5bc9;
+}
+
+/* ===== EMAIL LINK ===== */
+.email-link {
+  color: #001f3f;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: 0.5s;
+}
+
+.email-link:hover {
+  text-decoration: underline;
+  background-color: #f8f0cc;
+  border-radius: 5px;
+}
+
+/* ===== FOOTER ===== */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #001f3f;
+  color: white;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+.about {
+  padding: 80px 40px;
+}
+
+.about-cards {
+  display: flex;
+  gap: 30px;
+}
+
+.card {
+  padding: 30px;
+  background-color: #001f3f;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: white;
+  transition: all 0.5s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.about h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 30px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    margin: 0 auto;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px 0;
+  }
+
+  .about-cards {
+    flex-direction: column;
+    align-items: center;
+  }
 }
