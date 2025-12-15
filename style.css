@@ -43,6 +43,12 @@ body {
   transition: all 0.5s ease;
 }
 
+.nav-links a:focus-visible {
+  outline: 2px solid #4e73df;
+  outline-offset: 2px;
+}
+
+
 .nav-links a:hover {
   background-color: #f8f9fa;
   color: #0a0a5c;
@@ -157,6 +163,12 @@ body {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
 }
 
 /* ===== RESPONSIVE ===== */
@@ -195,3 +207,4 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
