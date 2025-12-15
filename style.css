@@ -18,6 +18,16 @@ body {
   color: white;
   text-decoration: none;
   font-size: 24px;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  font-family: "Open Sans", sans-serif;
+  padding: 15px;
+}
+
+.logo:hover {
+  color: #001f3f;
+  background-color: #f8f9fa;
+  padding: 15px;
 }
 
 .nav-links {
@@ -45,7 +55,7 @@ body {
   align-items: center;
   gap: 40px;
   min-height: 80vh;
-  margin-left: 10px;
+  padding: 0 40px;
 }
 
 .hero h1 {
@@ -86,28 +96,13 @@ body {
   background-color: #3a5bc9;
 }
 
-/* ===== EMAIL LINK ===== */
-.email-link {
-  color: #001f3f;
-  text-decoration: none;
-  font-weight: 500;
-  padding: 5px 10px;
-  transition: 0.5s;
-}
-
-.email-link:hover {
-  text-decoration: underline;
-  background-color: #f8f0cc;
-  border-radius: 5px;
-}
-
 /* ===== FOOTER ===== */
 .footer {
   text-align: center;
   padding: 20px;
   background-color: #001f3f;
   color: white;
-  position: fixed;
+  position: static;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -124,12 +119,12 @@ body {
 
 .card {
   padding: 30px;
-  background-color: #001f3f;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
   text-align: center;
-  color: white;
-  transition: all 0.5s ease;
+  color: #222;
+  transition: transfom 0.3s ease, box-shadow 0, 3s ease;
 }
 
 .card:hover {
@@ -141,12 +136,35 @@ body {
   margin-bottom: 40px;
 }
 
+.portfolio {
+  padding: 80px 40px;
+}
+
+.portfolio h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .portfolio-grid {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
+.project-card {
+  padding: 30px;
+  background-color: white;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+}
+
 /* ===== RESPONSIVE ===== */
+@media (max-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
 @media (max-width: 768px) {
   .hero {
     flex-direction: column;
@@ -171,5 +189,9 @@ body {
   .about-cards {
     flex-direction: column;
     align-items: center;
+  }
+
+  .portfolio-grid {
+    grid-template-columns: 1fr;
   }
 }

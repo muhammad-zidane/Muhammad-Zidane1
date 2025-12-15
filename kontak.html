@@ -5,11 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontak | Muhammad Zidane</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Russo+One&family=Yusei+Magic&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body class="background">
     <nav class="navbar">
       <ul>
-        <a href="gambar.jpg" class="logo">Portofolio<span>.</span></a>
+        <a href="#" class="logo">Portofolio<span>.</span></a>
       </ul>
       <ul class="nav-links">
         <a href="index.html">Beranda</a>
@@ -21,24 +27,43 @@
     <header>
       <h1>Kontak</h1>
     </header>
-    <article>Anda dapat menghubungi saya melalui:</article>
-    <article>
-      Email:
-      <a href="mailto:muhammadzidane253@gmail.com" class="email-link"
-        >muhammadzidane253@gmail.com</a
-      >
-    </article>
-    <article>
-      Telepon: <a href="tel:082283203385" class="email-link">082283203385</a>
-    </article>
 
-    <label for="nama">Nama</label> <br />
-    <input type="text" id="nama" value="Nama Anda" /> <br />
-    <label for="email">Email</label> <br />
-    <input type="email" id="email" value="contoh@gmail.com" /> <br />
-    <label for="pesan">Pesan</label> <br />
-    <textarea id="pesan" rows="4"></textarea> <br />
-    <button type="submit">Kirim</button>
+    <main>
+      <section class="contact-info">
+        <p>Anda dapat menghubungi saya melalui:</p>
+
+        <p>
+          Email:
+          <a href="mailto:muhammadzidane253@gmail.com" class="email-link">
+            muhammadzidane253@gmail.com
+          </a>
+        </p>
+
+        <p>
+          Telepon:
+          <a href="tel:082283203385" class="email-link"> 082283203385 </a>
+        </p>
+      </section>
+
+      <section class="contact-form">
+        <form>
+          <label for="nama">Nama</label>
+          <input type="text" id="nama" placeholder="Nama Anda" />
+
+          <label for="email">Email</label>
+          <input type="email" id="email" placeholder="contoh@gmail.com" />
+
+          <label for="pesan">Pesan</label>
+          <textarea
+            id="pesan"
+            rows="4"
+            placeholder="Tulis pesan Anda"
+          ></textarea>
+
+          <button type="submit">Kirim</button>
+        </form>
+      </section>
+    </main>
 
     <footer class="footer">2025 | &copy; Muhammad Zidane</footer>
   </body>
